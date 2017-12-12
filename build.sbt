@@ -8,7 +8,7 @@ logLevel := Level.Info
 resolvers += "Artifactory Realm" at "https://simudyne.jfrog.io/simudyne/releases"
 credentials += Credentials(file(".credentials"))
 
-lazy val providenceVersion = "2.0.0-alpha.3"
+lazy val providenceVersion = "2.0.0-alpha.4"
 libraryDependencies ++= Seq(
   "simudyne" %% "providence-simucom" % providenceVersion,
   "simudyne" %% "providence-simucore" % providenceVersion,
