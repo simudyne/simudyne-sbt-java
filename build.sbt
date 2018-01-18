@@ -1,4 +1,4 @@
-name := "providence-sbt-example"
+name := "simudyne-sbt-java"
 
 version := "0.1"
 
@@ -10,9 +10,9 @@ credentials += Credentials(file(".credentials"))
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-encoding", "UTF-8")
 
-lazy val providenceVersion = "2.0.0-alpha.5"
+lazy val simudyneVersion = "2.0.0-alpha.7"
 libraryDependencies ++= Seq(
-  "simudyne" %% "providence-simucom" % providenceVersion,
-  "simudyne" %% "providence-simucore" % providenceVersion,
-  "simudyne" %% "providence-simucore-abm" % providenceVersion
+  "simudyne" %% "simudyne-nexus-server" % simudyneVersion,
+  "simudyne" %% "simudyne-core" % simudyneVersion,
+  "simudyne" %% "simudyne-core-abm" % simudyneVersion
 )
