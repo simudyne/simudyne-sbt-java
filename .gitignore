@@ -1,2 +1,9 @@
 .idea
 target
+/bin/
+.cache-main
+.classpath
+.project
+.settings/org.eclipse.core.resources.prefs
+.settings/org.scala-ide.sdt.core.prefs
+simudyne-sbt-java.iml
