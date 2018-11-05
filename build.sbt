@@ -11,7 +11,7 @@ credentials += Credentials(file(".credentials"))
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-encoding", "UTF-8")
 scalacOptions ++= Seq("-target:jvm-1.8", "-deprecation", "-feature", "-unchecked")
 
-lazy val simudyneVersion = "2.0.4"
+lazy val simudyneVersion = "2.1.0"
 libraryDependencies ++= Seq(
   "simudyne" %% "simudyne-nexus-server" % simudyneVersion,
   "simudyne" %% "simudyne-core" % simudyneVersion,
