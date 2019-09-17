@@ -14,7 +14,6 @@ public class GameOfLife extends AgentBasedModel<GameOfLife.Globals> {
     @Constant float fillFactor = 0.25f;
   }
 
-  @Input boolean distributed = false;
   @Input int gridSize = 20;
 
   @Variable
@@ -23,20 +22,14 @@ public class GameOfLife extends AgentBasedModel<GameOfLife.Globals> {
   }
 
   {
-    registerAgentType(Cell.class);
-    registerMessageTypes(Messages.Start.class, Messages.Alive.class);
+    registerAgentTypes(Cell.class);
+    registerLinkTypes(Links.Neighbour.class);
 
     createLongAccumulator("born");
     createLongAccumulator("died");
   }
 
   public void setup() {
-    if (distributed) {
-      getConfig()
-          .setString(
-              "core-abm.backend-implementation", "simudyne.core.graph.spark.SparkGraphBackend");
-    }
-
     Group<Cell> cellsGroup =
         generateGroup(
             Cell.class,
