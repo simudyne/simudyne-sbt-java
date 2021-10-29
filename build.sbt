@@ -19,3 +19,5 @@ libraryDependencies ++= Seq(
   "simudyne" %% "simudyne-core-graph" % simudyneVersion,
   "simudyne" %% "simudyne-core-abm-testkit" % simudyneVersion
 )
+
+libraryDependencies += "org.codehaus.jettison" % "jettison" % "1.4.1"
